@@ -1,0 +1,11 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=${DEPLOYPATH:-/home/datapointtechnol/public_html/}
+    - /bin/mkdir -p $DEPLOYPATH
+    - /bin/mkdir -p $DEPLOYPATH/data
+    - /bin/chmod 755 $DEPLOYPATH/data
+    - /bin/cp -R assets includes api $DEPLOYPATH/
+    - /bin/cp index.php services.php products.php about.php contact.php config.php $DEPLOYPATH/
+    - /bin/cp .htaccess $DEPLOYPATH/
+    - /bin/cp data/.htaccess $DEPLOYPATH/data/
