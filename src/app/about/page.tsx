@@ -51,10 +51,10 @@ export default function AboutPage() {
 
             <div className="hidden lg:block">
               <div className="grid grid-cols-2 gap-4">
-                {["📹", "🌐", "🔌", "📡"].map((icon, i) => (
+                {["📹", "🌐", "🔌", "💻"].map((icon, i) => (
                   <div key={i} className="aspect-square bg-gradient-to-br from-secondary/50 to-primary/50 border border-white/5 rounded-2xl flex flex-col items-center justify-center gap-3">
                     <span className="text-5xl">{icon}</span>
-                    <span className="text-sm text-gray-400 font-medium">{services[i].title.split(" ").slice(0, 2).join(" ")}</span>
+                    <span className="text-sm text-gray-400 font-medium">{services[i]?.title.split(" ").slice(0, 2).join(" ")}</span>
                   </div>
                 ))}
               </div>

@@ -1,0 +1,344 @@
+<?php
+/**
+ * DATAPOINT Technologies - Service & Product Catalog Data
+ */
+
+$services = [
+    'cctv' => [
+        'order' => 1,
+        'id' => 'cctv',
+        'title' => 'CCTV & Security Surveillance',
+        'short' => 'Advanced surveillance systems with AI-driven detection, ColorVu 24/7 color, and mobile telemetry.',
+        'description' => 'We provide complete end-to-end CCTV and surveillance solutions including HD & 4K IP cameras, ColorVu night vision, PTZ smart tracking, high-capacity NVRs, and remote mobile monitoring. Custom designed for residential, commercial, and industrial facilities.',
+        'icon' => '📹',
+        'image' => 'assets/images/cat-cctv.jpg',
+        'features' => [
+            'HD & 4K IP Camera Installation',
+            'ColorVu 24/7 Vivid Night Vision',
+            'PTZ & Smart Human/Vehicle Tracking',
+            'PoE Network Video Recorders (NVR)',
+            'AcuSense Deep Learning Analytics',
+            'Remote Mobile Live View & Playback'
+        ],
+        'brands' => ['Hikvision', 'EZVIZ', 'Dahua', 'Reoqoo'],
+        'link' => 'services.php#cctv'
+    ],
+    'networking' => [
+        'order' => 2,
+        'id' => 'networking',
+        'title' => 'Networking Solutions',
+        'short' => 'High-performance enterprise networking, secure WiFi 6, routing, and managed switching infrastructure.',
+        'description' => 'From structured Cat6/Cat6A cabling to multi-gigabit switches, enterprise routers, and secure VPNs, we engineer robust network infrastructure that keeps your business connected with maximum uptime and security.',
+        'icon' => '🌐',
+        'image' => 'assets/images/cat-networking.jpg',
+        'features' => [
+            'LAN / WAN Architecture & Deployment',
+            'Structured Cabling (Cat6, Cat6A, Cat7)',
+            'Enterprise WiFi 6/6E Access Points',
+            'Managed PoE Switches & Routers',
+            'Next-Gen Firewalls & Network Security',
+            'Multi-Site VPN & Remote Worker Access'
+        ],
+        'brands' => ['Cisco', 'MikroTik', 'TP-Link', 'Ubiquiti', 'D-Link'],
+        'link' => 'services.php#networking'
+    ],
+    'fiber-datacom' => [
+        'order' => 3,
+        'id' => 'fiber-datacom',
+        'title' => 'Fiber Optic and DATA Communication',
+        'short' => 'Mission-critical high-speed optical fiber backbone, long-range wireless bridges, and data communication.',
+        'description' => 'Light-speed connectivity engineered for zero-latency operations. We specialize in single-mode and multi-mode optical fiber splicing, FTTH deployments, OTDR certification, RF point-to-point wireless bridges, and industrial SCADA data communication.',
+        'icon' => '🔌',
+        'image' => 'assets/images/cat-fiber.jpg',
+        'features' => [
+            'Single-Mode & Multi-Mode Fiber Cabling',
+            'Precision Core Fusion Splicing & Termination',
+            'FTTH, FTTO & Campus Backbone Networks',
+            'Optical Power Budget & OTDR Certification',
+            'Long-Distance Wireless Point-to-Point Bridges',
+            'Data Center Server Racks & SCADA Comm'
+        ],
+        'brands' => ['Corning', 'CommScope', 'FS.com', 'Panduit', 'Schneider'],
+        'link' => 'services.php#fiber-datacom'
+    ],
+    'software' => [
+        'order' => 4,
+        'id' => 'software',
+        'title' => 'Software Solutions',
+        'short' => 'Integrated enterprise web applications, inventory management, cloud invoicing, LMS, and ANPR suites.',
+        'description' => 'Tailor-made software built to digitize and automate your business operations. From our cloud Invoicing portal and Store Inventory system to Academic LMS, Admission, Biometric Attendance, and AI Vision suites.',
+        'icon' => '💻',
+        'image' => 'assets/images/products/software-lms.jpg',
+        'features' => [
+            'Store Inventory & Asset Management (Demo Live)',
+            'Enterprise Invoicing & Billing Portal',
+            'Student Portal & LMS Management System',
+            'Automatic Number Plate Recognition (ANPR)',
+            'Admission & Enrollment Management',
+            'Biometric Attendance & Recruitment Portals'
+        ],
+        'brands' => ['DATAPOINT Cloud', 'Web Applications', 'AI Agents', 'REST APIs'],
+        'link' => 'services.php#software'
+    ]
+];
+
+$softwareSolutions = [
+    [
+        'id' => 'inventory',
+        'title' => 'Store Inventory and Asset Management System',
+        'description' => 'Comprehensive enterprise warehouse, stock, and fixed asset tracking system with real-time stock levels, multi-location transfers, automated reorder triggers, supplier management, and barcode auditing.',
+        'image' => 'assets/images/products/software-attendance.jpg',
+        'features' => [
+            'Multi-store & warehouse inventory tracking',
+            'Asset lifecycle & maintenance monitoring',
+            'Barcode & QR code scanning integration',
+            'Automated stock-alert & reorder notifications',
+            'Detailed P&L, stock audit & movement reports',
+            'Multi-user roles with granular access controls'
+        ],
+        'demoUrl' => PORTAL_INVENTORY_DEMO,
+        'url' => PORTAL_INVENTORY_DEMO,
+        'icon' => '📦',
+        'badge' => 'Live Demo Available',
+        'category' => 'Enterprise'
+    ],
+    [
+        'id' => 'invoicing',
+        'title' => 'Enterprise Invoicing & Billing Portal',
+        'description' => 'Cloud-hosted commercial invoicing and quotation engine. Generates verified PDF estimates, manages client accounts, tracks payment receipts, and syncs directly with our AI Receptionist (Moomal & Soomal).',
+        'image' => 'assets/images/products/it-developer.png',
+        'features' => [
+            'Instant PDF invoice & estimate generation',
+            'Automated rate card & product pricing sync',
+            'Client ledger & payment receipt reconciliation',
+            'Integration with AI Receptionist for auto-quotes',
+            'Multi-currency & tax rate calculation',
+            'Secure cloud database with cPanel compatibility'
+        ],
+        'demoUrl' => PORTAL_INVOICING,
+        'url' => PORTAL_INVOICING,
+        'icon' => '🧾',
+        'badge' => 'Active Portal',
+        'category' => 'Enterprise'
+    ],
+    [
+        'id' => 'lms',
+        'title' => 'Student Portal / LMS Management System',
+        'description' => 'A complete learning management platform that powers online courses, video lectures, student dashboards, assignments, assessments, and parent-teacher communication from a unified portal.',
+        'image' => 'assets/images/products/software-lms.jpg',
+        'features' => [
+            'Interactive student & instructor portals',
+            'Course curriculum & lecture management',
+            'Digital assignments & online quiz evaluation',
+            'Fee voucher tracking & academic progress',
+            'Parent oversight & report card publishing',
+            'Seamless integration with biometric attendance'
+        ],
+        'url' => 'services.php#software',
+        'icon' => '🎓',
+        'badge' => 'Education Suite',
+        'category' => 'Education'
+    ],
+    [
+        'id' => 'anpr',
+        'title' => 'ANPR Monitoring Suite',
+        'description' => 'Automated Number Plate Recognition web suite. Integrates with HD security cameras to log vehicle entry/exit, flag blacklisted license plates, open barrier gates, and maintain audit logs.',
+        'image' => 'assets/images/products/software-anpr.jpg',
+        'features' => [
+            'High-accuracy optical character recognition',
+            'Real-time vehicle entry/exit logging',
+            'Automated barrier gate & boom control',
+            'Watchlist & blacklisted plate instant alerts',
+            'Searchable history by date, time, and plate',
+            'Cloud & on-premise local node deployments'
+        ],
+        'url' => 'services.php#software',
+        'icon' => '🚗',
+        'badge' => 'AI Vision',
+        'category' => 'Security'
+    ],
+    [
+        'id' => 'admission',
+        'title' => 'Admission Management System',
+        'description' => 'Streamline the institutional admission pipeline from applicant registration and document upload to merit list calculation, interview scoring, and automated acceptance letters.',
+        'image' => 'assets/images/products/software-admission.jpg',
+        'features' => [
+            'Customizable online applicant admission forms',
+            'Secure document upload & verification workflow',
+            'Automated merit calculation & quota filtering',
+            'Interview scheduling & scorecard capture',
+            'Admission fee receipt & challan generation',
+            'Instant SMS/Email admission notifications'
+        ],
+        'url' => 'services.php#software',
+        'icon' => '📋',
+        'badge' => 'Education',
+        'category' => 'Education'
+    ],
+    [
+        'id' => 'attendance',
+        'title' => 'Attendance Management System',
+        'description' => 'Enterprise attendance system supporting biometric fingerprint, RFID, and AI facial recognition cameras. Provides automated shifts, overtime calculation, and payroll exports.',
+        'image' => 'assets/images/products/software-attendance.jpg',
+        'features' => [
+            'Biometric device & facial camera sync',
+            'Multi-shift and rotating duty schedules',
+            'Late arrival, leave & overtime processing',
+            'Real-time daily attendance dashboards',
+            'One-click monthly payroll CSV export',
+            'Employee self-service mobile portal'
+        ],
+        'url' => 'services.php#software',
+        'icon' => '⏱️',
+        'badge' => 'Productivity',
+        'category' => 'Productivity'
+    ],
+    [
+        'id' => 'recruitment',
+        'title' => 'Recruitment Management System',
+        'description' => 'End-to-end applicant tracking system (ATS) to post vacancies, screen incoming resumes, schedule interview panels, track candidate pipelines, and issue digital offer letters.',
+        'image' => 'assets/images/products/software-recruitment.jpg',
+        'features' => [
+            'Public career page & vacancy publisher',
+            'Resume parsing & candidate pipeline kanban',
+            'Panel interview scheduling with calendar sync',
+            'Evaluator rating sheets & candidate notes',
+            'Automated email feedback to applicants',
+            'HR analytics on time-to-hire and cost'
+        ],
+        'url' => 'services.php#software',
+        'icon' => '👥',
+        'badge' => 'HR Suite',
+        'category' => 'HR'
+    ]
+];
+
+$products = [
+    [
+        'id' => 1,
+        'name' => 'Hikvision 4MP ColorVu Fixed Bullet Camera (DS-2CD2T47G2-L)',
+        'price' => '₨ 17,800',
+        'image' => 'assets/images/products/hik-bullet-front.png',
+        'category' => 'CCTV',
+        'rating' => 5,
+        'badge' => 'Best Seller',
+        'description' => '24/7 vivid full-color night imaging with F1.0 super aperture, 4MP Ultra-HD resolution, IP67 weatherproof housing, and AcuSense AI human/vehicle classification.'
+    ],
+    [
+        'id' => 2,
+        'name' => 'Hikvision 4MP ColorVu Fixed Turret Network Camera (DS-2CD2347G2-L)',
+        'price' => '₨ 16,500',
+        'image' => 'assets/images/products/hik-turret.png',
+        'category' => 'CCTV',
+        'rating' => 5,
+        'badge' => 'Popular',
+        'description' => 'Crystal clear 4MP resolution with built-in microphone for high fidelity audio, 130dB true WDR for harsh backlight scenes, and round-the-clock color surveillance.'
+    ],
+    [
+        'id' => 3,
+        'name' => 'Hikvision 8MP (4K) AcuSense Ultra-HD Camera (DS-2CD2386G2-I)',
+        'price' => '₨ 28,500',
+        'image' => 'assets/images/products/hik-bullet.png',
+        'category' => 'CCTV',
+        'rating' => 5,
+        'badge' => '4K Flagship',
+        'description' => 'Stunning 4K resolution with AcuSense deep learning perimeter protection, DarkFighter ultra low-light technology, active strobe defense, and IP67 rating.'
+    ],
+    [
+        'id' => 4,
+        'name' => 'Hikvision 8-ch PoE 4K Network Video Recorder (DS-7608NXI-K1/8P)',
+        'price' => '₨ 38,500',
+        'image' => 'assets/images/products/hik-nvr.png',
+        'category' => 'CCTV',
+        'rating' => 5,
+        'badge' => 'Sale',
+        'description' => '8 built-in PoE ports for plug-and-play installation, AcuSense 1-ch face recognition or 4-ch perimeter analysis, up to 4K HDMI output, and H.265+ smart encoding.'
+    ],
+    [
+        'id' => 5,
+        'name' => 'Hikvision 16-ch PoE 4K Enterprise AI NVR (DS-7716NXI-I4/16P/S)',
+        'price' => '₨ 58,000',
+        'image' => 'assets/images/products/hik-nvr2.png',
+        'category' => 'CCTV',
+        'rating' => 5,
+        'badge' => 'Enterprise',
+        'description' => '16-channel PoE AI NVR featuring dual HDMI outputs, 4 SATA drive bays for massive storage, facial picture library comparison, and deep learning vehicle tracking.'
+    ],
+    [
+        'id' => 6,
+        'name' => 'Outdoor Smart PTZ Dual-Lens 360° Tracking Camera',
+        'price' => '₨ 14,500',
+        'image' => 'assets/images/products/cctv-camera.png',
+        'category' => 'CCTV',
+        'rating' => 4,
+        'badge' => 'Hot Deal',
+        'description' => 'Dual-lens motorized PTZ camera with 360° pan/tilt coverage, optical zoom, dual-band WiFi connectivity, siren alarm, and automatic human tracking.'
+    ],
+    [
+        'id' => 7,
+        'name' => 'Visual Biometric & AI Face Recognition Access Terminal',
+        'price' => '₨ 24,500',
+        'image' => 'assets/images/products/biometric-device.png',
+        'category' => 'Access Control',
+        'rating' => 5,
+        'badge' => 'New',
+        'description' => 'High-speed facial recognition access control & attendance terminal with anti-spoofing algorithm, RFID card reader, TCP/IP communication, and door lock relay.'
+    ],
+    [
+        'id' => 8,
+        'name' => 'Cat6 UTP Pure Copper Network Cable (305M Roll)',
+        'price' => '₨ 16,500',
+        'image' => 'assets/images/cat-networking.jpg',
+        'category' => 'Networking',
+        'rating' => 5,
+        'badge' => 'Pure Copper',
+        'description' => 'Hikvision high-speed 23 AWG solid bare copper Cat6 network cable roll, certified for gigabit Ethernet, PoE power delivery, and low attenuation data transfer.'
+    ],
+    [
+        'id' => 9,
+        'name' => 'Western Digital Purple 4TB Surveillance Hard Drive',
+        'price' => '₨ 34,500',
+        'image' => 'assets/images/products/hik-nvr.png',
+        'category' => 'Accessories',
+        'rating' => 5,
+        'badge' => '24/7 Reliability',
+        'description' => 'Engineered specifically for 24/7, always-on, high-definition security systems. AllFrame technology reduces frame drops and improves overall video playback.'
+    ],
+    [
+        'id' => 10,
+        'name' => 'Western Digital Purple 1TB Surveillance HDD',
+        'price' => '₨ 10,900',
+        'image' => 'assets/images/products/hik-nvr2.png',
+        'category' => 'Accessories',
+        'rating' => 5,
+        'badge' => 'Essential',
+        'description' => '1TB surveillance-grade internal SATA hard disk optimized for DVR/NVR recorders with workload rates up to 180 TB/year.'
+    ],
+    [
+        'id' => 11,
+        'name' => 'Single-Mode & Multi-Mode Fiber Optic Cable (Outdoor Armored)',
+        'price' => '₨ 120 / m',
+        'image' => 'assets/images/cat-fiber.jpg',
+        'category' => 'Fiber Optic',
+        'rating' => 5,
+        'badge' => 'Heavy Duty',
+        'description' => 'Armored outdoor fiber optic cable with steel tape protection, moisture barrier, and high tensile strength for long-distance backbone interconnects.'
+    ],
+    [
+        'id' => 12,
+        'name' => 'Data Center Server Rack & Managed PoE Switch Suite',
+        'price' => '₨ 45,000+',
+        'image' => 'assets/images/products/hero-datacenter.jpg',
+        'category' => 'Data Communication',
+        'rating' => 5,
+        'badge' => 'Infrastructure',
+        'description' => 'Enterprise rack cabinet, 24/48 port managed gigabit PoE+ switches, cable organizers, and patch panels for structured communication rooms.'
+    ]
+];
+
+$stats = [
+    ['label' => 'Projects Completed', 'value' => '500+'],
+    ['label' => 'Active Deployments', 'value' => '350+'],
+    ['label' => 'Years Experience', 'value' => '10+'],
+    ['label' => 'Cameras & Nodes Installed', 'value' => '12,000+']
+];

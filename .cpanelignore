@@ -1,0 +1,34 @@
+# ==========================================================
+# cPanel Git Deployment Ignore Rules
+# Prevents overwriting live hosted databases & leads on server
+# ==========================================================
+
+# Database files & live stores
+*.sql
+*.sqlite
+*.sqlite3
+*.db
+*.dump
+database/
+db/
+data/*.json
+data/leads.json
+data/conversations/
+data/estimates.json
+data/invoices.json
+data/settings.json
+data/baileys_auth/
+
+# Environment files
+.env
+.env.*
+*.ini
+
+# Logs & temp
+*.log
+error_log
+.git/
+.gitignore
+.cpanelignore
+README.md
+
