@@ -9,3 +9,4 @@ deployment:
     - /bin/cp index.php services.php products.php about.php contact.php config.php $DEPLOYPATH/
     - /bin/cp .htaccess $DEPLOYPATH/
     - /bin/cp data/.htaccess $DEPLOYPATH/data/
+
